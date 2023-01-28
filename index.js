@@ -38,6 +38,10 @@ app.post("/form", async (req, res) => {
   }
 });
 
+app.all("*", (req, res) => {
+  res.status(404).json({ message: "This routes doesn't exist" });
+});
+
 app.listen(process.env.PORT, () => {
   console.log("server started✅");
 });
