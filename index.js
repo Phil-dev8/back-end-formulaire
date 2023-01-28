@@ -38,6 +38,6 @@ app.post("/form", async (req, res) => {
   }
 });
 
-app.listen(5500, () => {
+app.listen(process.env.PORT, () => {
   console.log("server started✅");
 });
